@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D05543A92A98EE1F00B3BE46 /* StepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05543A82A98EE1F00B3BE46 /* StepModel.swift */; };
+		D05543AB2A99003900B3BE46 /* CaloriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05543AA2A99003900B3BE46 /* CaloriesModel.swift */; };
 		D088C12D2A98AD5D00B5B449 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088C12C2A98AD5D00B5B449 /* BaseController.swift */; };
 		D088C12F2A98BAF800B5B449 /* PulseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088C12E2A98BAF800B5B449 /* PulseController.swift */; };
 		D088C1312A98BB0900B5B449 /* StepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088C1302A98BB0900B5B449 /* StepController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		D05543A82A98EE1F00B3BE46 /* StepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepModel.swift; sourceTree = "<group>"; };
+		D05543AA2A99003900B3BE46 /* CaloriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesModel.swift; sourceTree = "<group>"; };
 		D088C12C2A98AD5D00B5B449 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		D088C12E2A98BAF800B5B449 /* PulseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseController.swift; sourceTree = "<group>"; };
 		D088C1302A98BB0900B5B449 /* StepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				D088C1342A98BBB500B5B449 /* PulseModel.swift */,
 				D05543A82A98EE1F00B3BE46 /* StepModel.swift */,
+				D05543AA2A99003900B3BE46 /* CaloriesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				D088C12F2A98BAF800B5B449 /* PulseController.swift in Sources */,
 				D088C1312A98BB0900B5B449 /* StepController.swift in Sources */,
 				D088C1332A98BB1F00B5B449 /* CaloriesController.swift in Sources */,
+				D05543AB2A99003900B3BE46 /* CaloriesModel.swift in Sources */,
 				D088C12D2A98AD5D00B5B449 /* BaseController.swift in Sources */,
 				D08A83EF2A98973F009E659F /* SceneDelegate.swift in Sources */,
 			);
