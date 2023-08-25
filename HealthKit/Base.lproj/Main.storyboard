@@ -182,7 +182,7 @@
         <scene sceneID="ssT-Kk-7CW">
             <objects>
                 <tabBarController modalPresentationStyle="fullScreen" id="NG9-iw-Wpe" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZz-gl-glr">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZz-gl-glr" customClass="TabbarExtension" customModule="HealthCase" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
