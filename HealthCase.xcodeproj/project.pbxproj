@@ -80,7 +80,6 @@
 				D088C13F2A98C34C00B5B449 /* HealthKit.entitlements */,
 				D08A84042A989A7A009E659F /* Delegates */,
 				D08A84032A989A3B009E659F /* Controller */,
-				D08A84022A989A2F009E659F /* View */,
 				D08A84002A989A16009E659F /* Model */,
 				D08A83F22A98973F009E659F /* Main.storyboard */,
 				D08A83F52A989747009E659F /* Assets.xcassets */,
@@ -96,13 +95,6 @@
 				D088C1342A98BBB500B5B449 /* PulseModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D08A84022A989A2F009E659F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D08A84032A989A3B009E659F /* Controller */ = {

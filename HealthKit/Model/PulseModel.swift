@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct Pulse {
+struct PulseStr {
     var pulseQuantity : Int
+
 }

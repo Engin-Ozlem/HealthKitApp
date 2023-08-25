@@ -6,12 +6,6 @@
 //
 
 import UIKit
-import HealthKit
-
-
-
-
-
 class BaseController: UIViewController {
 
     @IBOutlet weak var continueButton: UIButton!
