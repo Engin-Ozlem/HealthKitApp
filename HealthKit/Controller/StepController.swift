@@ -9,7 +9,9 @@ import UIKit
 import HealthKit
 
 class StepController: UIViewController {
-
+    
+    
+    @IBOutlet weak var viewWeakly: UIView!
     @IBOutlet weak var viewSteps: UIView!
     let healthStore = HKHealthStore()
     let stepCountType = HKQuantityType.quantityType(forIdentifier: .stepCount)
@@ -17,6 +19,7 @@ class StepController: UIViewController {
     @IBOutlet weak var Steps: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         layoutEdit()
         requestPermission()
 
@@ -63,6 +66,9 @@ class StepController: UIViewController {
                 }
                 DispatchQueue.main.async {
                     self.Steps.text = "\(totalStepCount)"
+                    let str = StepStr(step: Int(totalStepCount))
+                    self.Steps.text = "\(str.step)"
+                    
                     
                 }
             }
@@ -80,6 +86,10 @@ class StepController: UIViewController {
         viewSteps.layer.cornerRadius = 10
         
         
+        
+        
     }
     
 }
+
+
