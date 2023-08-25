@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>we need to update your health data</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>The app wants to access your health data. Do you allow ?</string>
 </dict>
 </plist>
