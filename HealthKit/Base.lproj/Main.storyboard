@@ -1,24 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Base Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="BaseController" customModule="HealthKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="v2V-el-NOi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wXX-EH-Egp">
+                                <rect key="frame" x="20" y="612" width="154" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luC-us-6pF">
+                                        <rect key="frame" x="0.0" y="0.0" width="154" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HealthKit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpS-Uj-2BI">
+                                        <rect key="frame" x="0.0" y="35" width="154" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nc8-J4-eCN">
+                                <rect key="frame" x="71" y="804" width="272" height="31"/>
+                                <color key="backgroundColor" red="0.99574942610317108" green="1" blue="0.94973545241958179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="mBV-6d-8bA"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NG9-iw-Wpe" kind="presentation" id="VtV-Rj-BbC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nc8-J4-eCN" firstAttribute="centerX" secondItem="v2V-el-NOi" secondAttribute="centerX" id="3pl-wv-TM2"/>
+                            <constraint firstAttribute="bottom" secondItem="v2V-el-NOi" secondAttribute="bottom" id="7PX-8n-Jeo"/>
+                            <constraint firstItem="wXX-EH-Egp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Cfe-pG-0Xc"/>
+                            <constraint firstItem="v2V-el-NOi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="S7v-i0-24H"/>
+                            <constraint firstItem="Nc8-J4-eCN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="a9q-sG-tmf"/>
+                            <constraint firstItem="v2V-el-NOi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sKm-Xb-VFi"/>
+                            <constraint firstItem="v2V-el-NOi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="smb-mE-8pt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nc8-J4-eCN" secondAttribute="bottom" constant="27" id="yZq-yJ-DyM"/>
+                            <constraint firstItem="wXX-EH-Egp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="568" id="ysV-TI-1d5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueButton" destination="Nc8-J4-eCN" id="4tH-uy-2mr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-4" y="90"/>
+        </scene>
+        <!--Step-->
+        <scene sceneID="rmx-hX-UyH">
+            <objects>
+                <viewController id="6LN-qh-iyI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ExR-Ik-Eff">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7LA-GP-yAk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Step" image="figure.walk" catalog="system" id="0k6-51-IxD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53H-GA-8R7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="419"/>
+        </scene>
+        <!--Health-->
+        <scene sceneID="DOZ-mb-2CJ">
+            <objects>
+                <viewController id="uyO-He-Whx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gfh-cl-SiJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kvv-AX-IBB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Health" image="stethoscope" catalog="system" id="Xs6-xL-J2P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcO-P9-zfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="-285"/>
+        </scene>
+        <!--calorie-->
+        <scene sceneID="szJ-t5-JwN">
+            <objects>
+                <viewController id="HU1-Gr-BhW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JLJ-Yz-sGR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Skn-bp-xg8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="calorie" image="heart" catalog="system" id="hze-Lg-0kO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAY-BC-1eO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="1092"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ssT-Kk-7CW">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="NG9-iw-Wpe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZz-gl-glr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uyO-He-Whx" kind="relationship" relationship="viewControllers" id="J5v-r7-lc3"/>
+                        <segue destination="6LN-qh-iyI" kind="relationship" relationship="viewControllers" id="HgG-wP-D4z"/>
+                        <segue destination="HU1-Gr-BhW" kind="relationship" relationship="viewControllers" id="nyg-28-V2v"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ix3-a1-gyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1974" height="2961"/>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="stethoscope" catalog="system" width="128" height="96"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
